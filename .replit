@@ -1,0 +1,13 @@
+language = "java17"
+run = """
+javac com.adv.java.iostream/module-info.java com.adv.java.iostream/com/adv/java/iostream/Lesson1IOStream.java com.adv.java.iostream/com/adv/java/iostream/Employee.java
+
+javac com.adv.java.regex/module-info.java    com.adv.java.regex/com/adv/java/regex/Lesson2RegEx.java
+
+javac com.adv.java.xml/module-info.java    com.adv.java.xml/com/adv/java/xml/Lesson4XML.java
+
+
+javac -p com.adv.java.regex:com.adv.java.iostream:com.adv.java.xml com.adv.java.fin.application/module-info.java com.adv.java.fin.application/com/adv/java/fin/application/FinalApp.java
+
+java --module-path com.adv.java.fin.application:com.adv.java.iostream:com.adv.java.regex:com.adv.java.xml --module com.adv.java.fin.application/com.adv.java.fin.application.FinalApp
+"""
